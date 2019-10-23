@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <title>AniPocket-FAQ</title>
+    <link rel="icon" href="icon/favicon.ico">
+    <link rel="stylesheet" href="css/styles_common.css">
+    <link rel="stylesheet" href="css/styles_faq.css">
+    <script type="text/javascript">
+      $(function(){
+        // When the p element in .accordion is clicked
+        $('.accordion p').click(function(){
+          // The ul element adjacent to the p element opens or closes
+          $(this).next('ul').slideToggle();
+          // When active, mark bacomes minus sign (-)
+          $(this).toggleClass("active")
+        });
+
+        // When the p element in the li element in .inner in .accordion is clicked
+        $('.accordion .inner li p').click(function() {
+          // The ul element of the child element of the p element opens or closes
+          $(this).children('ul').slideToggle();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <a href="Home.html"><img src="img/logo.png"></a>
+          <li>
+            <a href="Home.html">ホーム<br>Home</a>
+          </li>
+          <li class="current">
+            <a href="FAQ.html">よくある質問<br>FAQ</a>
+          </li>
+          <li>
+            <a href="Contact.html">お問い合わせ<br>Contact us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1>よくある質問(FAQ)</h1>
+    <section>
+      <ul class="accordion">
+        <li>
+          <p class="ac">
+            「見ているアニメ」について<br>
+            About "Watching"
+          </p>
+          <ul class="inner">
+            <li class="content">
+              <p>
+                アニメを追加できません。<br>
+                I can't add an anime.
+              </p>
+              <ul>
+                <li>
+                  放送中のアニメを追加する際は、「タイトル」と「曜日」が入力必須です。過去作品のアニメを追加する際は、「タイトル」が入力必須です。追加するアニメの種類(放送中/過去作品)の切替は入力フォームの最上部にあるスイッチで行います。<br>
+                  When adding a present anime, "Title" and "Day of the week" are required. When adding a past anime, "Title" is required. The type of adding anime(present/past) is switched by the switch at the top of the input form.
+                </li>
+              </ul>
+            </li>
+            <li class="content">
+              <p>
+                アニメを消去するにはどうすれば良いですか？<br>
+                How can I delete a anime?
+              </p>
+              <ul>
+                <li>
+                  セルを長押ししてください。消去確認のアラートが表示されるのでOKをタップしてください。複数のアニメを同時に消去することはできません。<br>
+                  Hold a cell. An delete confirmation alert is displayed. Tap OK. You cannot delete multiple animes at the same time.
+                </li>
+              </ul>
+            </li>
+            <li class="content">
+              <p>
+                アニメの並び替えはできますか？<br>
+                Can I rearrange animes?
+              </p>
+              <ul>
+                <li>
+                  できません。放送中のアニメは曜日順、同じ曜日内では開始時間順に並んでいます。過去作品のアニメは追加順に並んでいます。<br>
+                  You can not. Present animes are arranged in the order of the day of the week, and the order of the start time within the same day of the week. Past animes are arranged in order of addition.
+                </li>
+              </ul>
+            </li>
+            <li class="content">
+              <p>
+                放送中のアニメのセルをタップしても何も起きません。<br>
+                Nothing happens when I tap a cell in Watching(Present).
+              </p>
+              <ul>
+                <li>
+                  放送中のアニメのセルをタップしても何も起こらない仕様になっています。<br>
+                  This is a specification that nothing happens.
+                </li>
+              </ul>
+            </li>
+            <li class="content">
+              <p>
+                アニメを「ログ」以外に移動することはできますか？<br>
+                Can I move an anime to other than "Log"?
+              </p>
+              <ul>
+                <li>
+                  できません。<br>
+                  You can not.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="ac">
+            「ログ」について<br>
+            About "Log"
+          </p>
+          <ul class="inner">
+            <li class="content">
+              <p>
+                アニメを追加できません。<br>
+                I can't add an anime.
+              </p>
+              <ul>
+                <li>
+                  「タイトル」と「開始年月」が入力必須です。「終了年月」が「開始年月」より前の場合も追加できません。<br>
+                  "Title" and "Start date" are required. You cannot add even if ”End date” is earlier than ”Start date”.
+                </li>
+              </ul>
+            </li>
+            <li class="content">
+              <p>
+                アニメを消去するにはどうすれば良いですか？<br>
+                How can I delete a anime?
+              </p>
+              <ul>
+                <li>
+                  アニメのセルを長押ししてください。年数字が書かれたセルを長押ししても消去することはできません。<br>
+                  Hold an anime cell. You cannot delete even if you hold an cell with year number.
+                </li>
+              </ul>
+            </li>
+            <li class="content">
+              <p>
+                アニメの並び替えはできますか？<br>
+                Can I rearrange animes?
+              </p>
+              <ul>
+                <li>
+                  できません。同じ年のアニメは開始月順に並んでいます。<br>
+                  You can not. Animes of the same year are arranged in order of start month.
+                </li>
+              </ul>
+            </li>
+            <li class="content">
+              <p>
+                編集はどうすればできますか？<br>
+                How can I edit?
+              </p>
+              <ul>
+                <li>
+                  編集したいアニメのセルをタップしてください。表示されたポップアップの左下にあるペンマークをタップすると編集できます。<br>
+                  Tap the anime cell you want to edit. Tap the pen mark at the bottom left of the displayed popup to edit.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="ac">
+            「あとで見るアニメ」について<br>
+            About "Watch Later"
+          </p>
+          <ul class="inner">
+            <li class="content">
+              <p>
+                アニメを追加できません。<br>
+                I can't add an anime.
+              </p>
+              <ul>
+                <li>
+                  「タイトル」が入力必須です。「終了年月」が「開始年月」より前の場合も追加できません。<br>
+                  "Title" is required. You cannot add even if "End date" is earlier than ”Start date”.
+                </li>
+              </ul>
+            </li>
+            <li class="content">
+              <p>
+                アニメを消去するにはどうすれば良いですか？<br>
+                How can I delete a anime?
+              </p>
+              <ul>
+                <li>
+                  セルを長押ししてください。複数のアニメを同時に消去することはできません。<br>
+                  Hold a cell. You cannot delete multiple animes at the same time.
+                </li>
+              </ul>
+            </li>
+            <li class="content">
+              <p>
+                セルをタップしても何も起きません。<br>
+                Nothing happens when I tap a cell.
+              </p>
+              <ul>
+                <li>
+                  それは仕様です。<br>
+                  This is a specification.
+                </li>
+              </ul>
+            </li>
+            <li class="content">
+              <p>
+                アニメを「見ているアニメ(過去作品)」以外に移動することはできますか？<br>
+                Can I move an anime to other than "Watching(Past)"?
+              </p>
+              <ul>
+                <li>
+                  できません。<br>
+                  You can not.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="ac">
+            「データ」について<br>
+            About "Data"
+          </p>
+          <ul class="inner">
+            <li class="content">
+              <p>
+                データが表示されません。<br>
+                No data is displayed.
+              </p>
+              <ul>
+                <li>
+                  「ログ」にアニメを追加してください。「年別タイトル数」と「ジャンル別タイトル数」は「ログ」に追加されているアニメ情報に基づいています。<br>
+                  Add animes to "Log". "Num of titles by year" and "Num of titles by genre" are based on the information of animes added to "Log".
+                </li>
+              </ul>
+            </li>
+            <li class="content">
+              <p>
+                年別タイトル数のバーの色はどのような基準で変化していますか？<br>
+                On what basis is the color of the bar for the num of titles by year changed?
+              </p>
+              <ul>
+                <li>
+                  年ごとのアニメ数で変化します。10以下はグリーン、20以下はイエロー、30以下はオレンジ、31以上はレッドです。<br>
+                  It changes with the num of animes per year. 10 and below are green, 20 and below are yellow, 30 and below are orange, and 31 and above are red.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="ac">
+            その他<br>
+            Other
+          </p>
+          <ul class="inner">
+            <li class="content">
+              <p>
+                追加したアニメのデータはどこに保存されていますか？<br>
+                Where is the added anime data stored?
+              </p>
+              <ul>
+                <li>
+                  追加したデータはローカル保存されます。外部サーバーにアクセスしないため、電波状況に関係なくアプリをご利用いただけます。<br>
+                  The added data is saved locally. Because this app do not access an external server, you can use AniPocket regardless of the radio wave condition.
+                </li>
+              </ul>
+            </li>
+            <li class="content">
+              <p>
+                Android版アプリはありますか？<br>
+                Is there AniPocket for Android?
+              </p>
+              <ul>
+                <li>
+                  ありません。iOS版のみとなっております。<br>
+                  No. AniPocket is for only iOS.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+        <ul>
+          <li>
+            <a href="https://fukky21.github.io/AniPocket/PrivacyPolicy">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="License.html">License</a>
+          </li>
+        </ul>
+        <p>
+          (c)Fukky21
+        </p>
+      </footer>
+  </body>
+</html>

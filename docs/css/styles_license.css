@@ -1,0 +1,19 @@
+body {
+  font-family: 'Hiragino Kaku Gothic Pro';
+}
+
+h1 {
+  margin: 1em 0;
+  font-size: 130%;
+  padding: 0 10px;
+}
+
+h2 {
+  margin: 1em 0;
+  font-size: 110%;
+  padding-left: 10px;
+}
+
+pre {
+  color: #7F7F7F;
+}
