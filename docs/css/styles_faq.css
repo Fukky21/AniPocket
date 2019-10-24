@@ -1,7 +1,11 @@
 h1 {
-  margin: 1em 0;
   font-size: 140%;
-  padding: 0 10px;
+  padding-left: 3vw;
+}
+
+section {
+  padding-left: 4vw;
+  padding-right: 4vw;
 }
 
 section ul {
@@ -12,13 +16,13 @@ section ul {
 
 .accordion {text-align: left;}
 .accordion .inner {display: none;}
-.accordion .inner li ul{display: none;}
-.accordion p{cursor: pointer; padding: 10px 30px 10px 15px;}
-.accordion p.ac{background: #CCCCCC;}
-.accordion .inner li ul li{padding: 10px 15px;}
-.accordion .inner li > p{cursor: pointer;}
-.accordion .inner li.content{background: #E5E5E5;}
-.accordion .inner li.content li:nth-child(1){background: #CCCCCC;}
+.accordion .inner li ul {display: none;}
+.accordion p {cursor: pointer; padding: 10px 30px 10px 15px;}
+.accordion p.ac {background: #CCCCCC;}
+.accordion .inner li ul li {padding: 10px 15px;}
+.accordion .inner li > p {cursor: pointer;}
+.accordion .inner li.content {background: #E5E5E5;}
+.accordion .inner li.content li:nth-child(1) {background: #CCCCCC;}
 
 .accordion p {
   position: relative;
@@ -26,12 +30,12 @@ section ul {
 
 .accordion p:after {
   content: "\02795"; /* Unicode character for "plus" sign (+) */
-  font-size: 15px;
+  font-size: 2vw;
   color: #777;
   position: absolute;
   top: 50%;
   left: 94%;
-  margin-top: -12.5px
+  margin-top: -1.25vw;
 }
 
 .accordion p.active:after {

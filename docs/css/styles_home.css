@@ -1,3 +1,100 @@
 .resizeimage img {
   width: 100%;
 }
+
+.fadeInDown {
+ -webkit-animation-fill-mode:both;
+ -ms-animation-fill-mode:both;
+ animation-fill-mode:both;
+ -webkit-animation-duration:1s;
+ -ms-animation-duration:1s;
+ animation-duration:1s;
+ -webkit-animation-name: fadeInDown;
+ animation-name: fadeInDown;
+ visibility: visible !important;
+}
+@-webkit-keyframes fadeInDown {
+ 0% { opacity: 0; -webkit-transform: translateY(-20px); }
+ 100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+@keyframes fadeInDown {
+ 0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
+ 100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+}
+
+section {
+  margin: 10vw 5vw 0px 5vw;
+}
+
+section h1 {
+  font-size: 4vw;
+}
+
+div.box {
+  display: flex;
+  padding-top: 10vw;
+}
+
+.box:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+section div.box div img {
+  width: 35vw;
+}
+
+section div.box div p {
+  font-family: "Crimson Text", serif;
+  font-size: 3vw;
+  padding-top: 5vw;
+}
+
+section div.box div p.explanation {
+  color: #4C4C4C;
+  font-size: 2vw;
+}
+
+section div.child img {
+  width: 35vw;
+}
+
+section div.parent {
+  padding-top: 10vw;
+  clear: both;
+  text-align: center;
+}
+
+section div.parent div.child {
+  display: inline-block;
+  margin: 3vw;
+}
+
+section div.parent div.child p {
+  font-family: "Crimson Text", serif;
+  font-size: 3vw;
+}
+
+section div.rounded-square {
+  background: #454E7D;
+  border-radius: 3vw;
+  color: white;
+  font-size: 3vw;
+  margin-bottom: 20vw;
+}
+
+section div.rounded-square p {
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+  text-align: center;
+}
+
+section div.rounded-square p img {
+  width: 8vw;
+  height: 8vw;
+  vertical-align: middle;
+}
+
+section div.rounded-square p a img {
+  padding-top: 4vw;
+  width: 24vw;
+}
