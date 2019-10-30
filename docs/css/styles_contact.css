@@ -9,7 +9,11 @@ section p {
   padding-bottom: 7vw;
 }
 
-section img {
+section div {
+  margin-bottom: 4vw;
+}
+
+section div img {
   width: 6vw;
   height: 6vw;
   padding-left: 4vw;
